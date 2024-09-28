@@ -23,6 +23,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+
+    @media (max-width: 768px) {
+      
+      font-size: 87.5%;
+      background-color: ${props => props.theme['purple-900']};
+
+    }
  }
 
 `;

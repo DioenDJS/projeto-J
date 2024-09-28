@@ -4,6 +4,10 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 90rem;
+
+     @media (max-width: 768px) {
+        width: 24rem;
+    }
 `;
 
 export const HeaderContainer = styled.header`
@@ -13,6 +17,16 @@ export const HeaderContainer = styled.header`
     width: 90rem;
     height: 42.3125rem;
     gap: 11rem;
+    
+    @media (max-width: 768px) {
+        height: 52rem;
+        width: 24.7rem;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0 0 0;
+        gap: 2rem;
+    }
+
 `;
 
 export const ArticleContainer = styled.div`
@@ -36,6 +50,21 @@ export const ArticleContainer = styled.div`
         font-size: 1.25rem;
         color: ${props => props.theme['wine-500']};
     }
+
+    @media (max-width: 768px) {
+        width: 23.7rem;
+        margin: 0 0.5rem;
+        strong {
+            font-size: 3rem;
+            width: 1.5rem;
+        }
+        p:first-of-type {
+            font-size: 0.875rem;
+        }
+        p:last-of-type {
+            font-size: 0.75rem;
+        }
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -48,6 +77,11 @@ export const ImageContainer = styled.div`
         height: auto; /* Mantém a proporção */
         max-width: 28rem; /* Limita a largura máxima */
         z-index: 9999; /* Valor alto para sobreposição */
+    }
+    @media (max-width: 768px) {
+        img {
+            max-width: 24.3rem;
+        }
     }
 `;
 
@@ -68,10 +102,29 @@ export const BodyContainer = styled.div`
         word-spacing: -0.05em;
         color: ${props => props.theme['purple-900']};
     }
+
+    @media (max-width: 768px) {
+        width: 24.7rem;
+        height: 92rem;
+        padding:  2rem 0 0 1rem;
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            font-size: 2.5rem;
+            width: 18rem;
+        }
+    }
 `;
 
 export const CuboCardContainer = styled.div`
     display: flex;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 24.7rem;
+        gap: 1rem;
+    }
 `;
 
 export const CardContainer = styled.div`
@@ -122,6 +175,12 @@ export const CardContainer = styled.div`
             border-color: ${props => props.theme['gray-100']};
         }
     }
+
+    @media (max-width: 768px) {
+        width: 22rem;
+        padding: 2rem;
+        margin: 0.5rem;
+    }
 `;
 export const ServiceContainer = styled.div`
     display: flex;
@@ -140,6 +199,22 @@ export const ServiceContainer = styled.div`
         flex-direction: column;
         font-style: italic;
         color: ${props => props.theme['purple-900']};
+    }
+
+    @media (max-width: 768px) {
+        width: 24.7rem;
+        height: 24rem;
+        gap: 1.5rem;
+
+        /* Aqui adicionamos overflow-x: auto para habilitar a rolagem horizontal */
+        overflow-x: auto; /* Habilita a rolagem horizontal */
+        overflow-y: hidden; /* Esconde a rolagem vertical, se necessário */
+        
+        div {
+            width: 18rem;
+            height: 16rem;
+            gap: 0.5rem;
+        }
     }
 `;
 
@@ -168,6 +243,18 @@ export const SocialWebContainer = styled.div`
     svg{
         color: ${props => props.theme['wine-500']};
     }
+
+    @media (max-width: 768px) {
+        width: 24.7rem;
+        height: 10rem;
+        gap: 1rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        svg{
+            color: ${props => props.theme['wine-gray-100']};
+        }
+    }
 `;
 
 export const FooterContainer = styled.footer`
@@ -176,4 +263,12 @@ export const FooterContainer = styled.footer`
     width: 90rem;
     height: 22.3125rem;
     background: ${props => props.theme['wine-500']};
+
+    @media (max-width: 768px) {
+        width: 24.7rem;
+        height: 10rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `;

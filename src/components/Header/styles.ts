@@ -36,4 +36,7 @@ export const HeaderContainer = styled.header`
             }
         }
     }
+
+    @media (max-width: 768px) {
+    }
 `;
